@@ -1,0 +1,29 @@
+[package]
+name = "ed25519_poc"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "ed25519_poc"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = "0.27.0"
+getrandom = { version = "0.2.9", features = ["custom"] }
+solana-program="=1.14.17"
+anchor-spl = "0.27.0"
+winnow = "=0.4.1"
+spl-token = "3.5.0"
+toml_datetime = "=0.6.1"
+spl-associated-token-account = "1.0.5"
+
+hex = "0.4"
+bs58 = "0.5"
